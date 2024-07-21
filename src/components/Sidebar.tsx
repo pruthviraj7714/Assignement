@@ -6,7 +6,7 @@ export function Sidebar() {
     <div className="w-8 h-8 flex items-center justify-center mx-6 bg-black rounded-none text-white dark:bg-white dark:text-black">
         <LucideTrendingUp />
     </div>
-    <div className="flex flex-col items-start mt-7 gap-y-8 p-4 font-sans">
+    <div className="flex flex-col items-start text-md mt-7 gap-y-6 p-4 font-sans">
         <div className="flex items-center gap-3">
             <StarsIcon />
             <h3>AI Assist</h3>
