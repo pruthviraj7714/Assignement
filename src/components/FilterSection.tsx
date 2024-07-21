@@ -1,9 +1,12 @@
+"use client"
 import { ChevronUp, Search } from "lucide-react";
 import { Checkbox } from "./ui/checkbox";
 import { CheckboxWithText } from "./CheckBoxWithText";
 import { ANNOUNCEMENT_TYPES } from "@/data/announcements-types";
 
+
 export function FilterSection() {
+
   return (
     <div className="flex flex-col mt-6 space-y-6 bg-gray-50 p-6 rounded-lg shadow-lg">
       <span className="font-semibold text-lg text-gray-700">Filter By</span>
@@ -27,7 +30,7 @@ export function FilterSection() {
           <span className="ml-2 font-semibold text-gray-700">Sentiment</span>
         </div>
         <div className="space-y-2">
-          <CheckboxWithText text="Positive" />
+          <CheckboxWithText text="Positive"  />
           <CheckboxWithText text="Neutral" />
           <CheckboxWithText text="Negative" />
         </div>

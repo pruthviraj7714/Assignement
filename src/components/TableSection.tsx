@@ -7,12 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { DATA } from "@/data/announcements-data";
 import Link from "next/link";
 import { PaginationComponent } from "./Pagination";
 import { useState } from "react";
 
-const ITEMS_PER_PAGE = 6; // Adjust as necessary
+const ITEMS_PER_PAGE = 6;
 
 export function TableSection({ data }: { data: any }) {
   const [currentPage, setCurrentPage] = useState(1);

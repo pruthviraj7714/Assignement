@@ -1,10 +1,10 @@
 export const ANNOUNCEMENT_TYPES = [
-    "Company Mergers",
+    "Company Merger",
     "Disposals and divestitures",
     "Business Restructuring",
-    "Expansion Plans",
-    "Financial Troubles",
-    "Management Changes",
+    "Expansion Plan",
+    "Financial Trouble",
+    "Management Change",
     "Capital Structure Changes",
     "Contract Awards",
     "Legal Disputes",
@@ -24,5 +24,5 @@ export const ANNOUNCEMENT_TYPES = [
     "Offer for Sale",
     "US FDA Inspections",
     "Earnings Calls",
-    "Other Situations"
+    "Other Situations",
 ];
