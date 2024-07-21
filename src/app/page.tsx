@@ -1,14 +1,10 @@
 import { Appbar } from "@/components/Appbar";
 import { FilterSection } from "@/components/FilterSection";
+import { PaginationComponent } from "@/components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
 import { TableSection } from "@/components/TableSection";
-import {
-  AudioLines,
-  BarChart3,
-  Calendar,
-  Network,
-  StarsIcon,
-} from "lucide-react";
+import { DATA } from "@/data/announcements-data";
+import { BarChart3, Calendar, Network, StarsIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -27,29 +23,26 @@ export default function Home() {
               <StarsIcon size={18} />
               <span className="font-medium">AI-Powered</span>
             </div>
-            <div className="flex  gap-1 border border-gray-300 px-3 py-1 h-8 rounded-md shadow-sm bg-white">
+            <div className="flex gap-1 border border-gray-300 px-3 py-1 h-8 rounded-md shadow-sm bg-white">
               <BarChart3 size={18} className="text-green-500" />
               <span className="font-medium text-gray-700">Filter</span>
             </div>
             <span className="font-medium text-gray-600">
               Filtered Announcements: 124
             </span>
-            <div className="flex  gap-2 text-gray-700">
+            <div className="flex gap-2 text-gray-700">
               <Calendar size={18} className="text-purple-500" />
               <span className="font-medium">6 Feb 2024 - 7 Feb 2024</span>
             </div>
-            <div className="flex  gap-2 text-gray-700">
+            <div className="flex gap-2 text-gray-700">
               <Network size={18} className="text-red-500" />
               <span className="font-medium">Updates every 15 minutes</span>
             </div>
           </div>
         </div>
         <div>
-          <TableSection />
+          <TableSection data={DATA} />
         </div>
-      </div>
-      <div>
-
       </div>
     </div>
   );

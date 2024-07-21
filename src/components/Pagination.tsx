@@ -1,38 +1,35 @@
-import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
-  } from "@/components/ui/pagination"
-   
-  export function PaginationComponent() {
-    return (
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" isActive>
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    )
-  }
+"use client"
+
+import React from 'react';
+
+export function PaginationComponent({ currentPage, totalPages, onPageChange } : any) {
+  const handlePrevious = () => {
+    if (currentPage > 1) onPageChange(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) onPageChange(currentPage + 1);
+  };
+
+  return (
+    <div className="flex justify-center items-center gap-4">
+      <button
+        onClick={handlePrevious}
+        disabled={currentPage === 1}
+        className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+      >
+        Previous
+      </button>
+      <span className="text-sm font-medium text-gray-700">
+        Page {currentPage} of {totalPages}
+      </span>
+      <button
+        onClick={handleNext}
+        disabled={currentPage === totalPages}
+        className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+      >
+        Next
+      </button>
+    </div>
+  );
+}
