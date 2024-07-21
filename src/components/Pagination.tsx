@@ -12,15 +12,15 @@ export function PaginationComponent({ currentPage, totalPages, onPageChange } : 
   };
 
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex justify-center items-center gap-4 ">
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}
-        className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+        className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded dark:bg-white hover:bg-gray-300 disabled:opacity-50"
       >
         Previous
       </button>
-      <span className="text-sm font-medium text-gray-700">
+      <span className="text-sm font-medium dark:text-white text-gray-700">
         Page {currentPage} of {totalPages}
       </span>
       <button
